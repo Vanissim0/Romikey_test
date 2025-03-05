@@ -1,0 +1,227 @@
+/* ==== Слайдер ==== */
+.slider-section {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /*height: 60vh;*/
+    height: 844px;
+    position: relative;
+}
+
+.swiper-container {
+    width: 80%;
+    padding-bottom: 0;
+}
+
+.swiper-wrapper {
+    display: flex;
+    /*justify-content: flex-end;*/
+    position: relative;
+}
+
+.swiper-slide.custom {
+    /*max-width: 552px;*/
+    max-height: 684px;
+    background: #19191B;
+    border-top: 1px solid transparent;
+    display: flex;
+    color: white;
+    border-radius: 0;
+    /*transition: transform 0.3s ease;*/
+    height: 684px;
+    width: 552px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.slider-container {
+    padding: 36px 41px;
+    border-top: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.slider-header .name-service {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 55px;
+}
+
+.slider-content .slider-list {
+    padding-left: 0;
+}
+
+.slider-content .slider-list li {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+    color: #3B3D48;
+    margin: 21px 0;
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+}
+
+.slider-content .slider-list li::before {
+    content: "/";
+    position: absolute;
+    left: 0;
+    color: #121213;
+}
+
+.swiper-slide-active .slider-content .slider-list li {
+    color: #ffffff;
+}
+
+.swiper-slide-active .slider-content .slider-list li::before {
+    color: var(--color-blue);
+}
+
+.slider-header .price-service {
+    visibility: hidden;
+    display: flex;
+    transition: all 0.1s;
+}
+
+.swiper-slide-active .slider-header .price-service {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+    color: var(--color-blue);
+    display: flex;
+    visibility: visible;
+}
+
+.slider-link {
+    visibility: hidden;
+    display: block;
+    width: 145px;
+    position: absolute;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    right: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.1s;
+    color: #ffffff;
+    cursor: none;
+}
+
+.swiper-slide-active .slider-link {
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.slider-link svg {
+    bottom: 10px;
+    position: relative;
+}
+
+.swiper-slide-active .slider-link svg {
+    /*bottom: 10px;*/
+    /*position: relative;*/
+}
+
+.swiper-slide-active .slider-link:hover  {
+    transform: translate(15px, 0);
+}
+
+.swiper-slide.custom.swiper-slide-active {
+    /*!*transform: scale(1.1);*/
+    background: #121213;
+    border-top: 1px solid var(--color-blue);
+    border-bottom: 1px solid var(--color-blue);
+}
+
+.swiper-slide:hover ~ .custom-cursor {
+    transform: scale(2);
+}
+
+@media (max-width: 768px) {
+    .slider-section {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        height: 550px;
+        overflow: hidden;
+    }
+
+    .swiper-container {
+        /*width: 80%;*/
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        /*justify-content: flex-end;*/
+        position: relative;
+    }
+
+    .swiper-slide.custom {
+        /*max-width: 552px;*/
+        max-height: 480px;
+        height: 460px;
+    }
+
+    .slider-container {
+        padding: 20px 15px;
+    }
+
+    .slider-header .name-service {
+        font-size: 32px;
+        line-height: 41px;
+    }
+
+    .slider-content .slider-list {
+        padding-left: 0;
+    }
+
+    .slider-content .slider-list li {
+        font-size: 16px;
+        line-height: 19px;
+        margin: 12px 0;
+        padding-left: 15px;
+    }
+
+    .swiper-slide-active .slider-header .price-service {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+    .slider-link {
+        width: 104px;
+        font-size: 11px;
+        line-height: 20px;
+        right: 22px;
+    }
+
+    .swiper-slide-active .slider-link {
+        visibility: visible;
+        transition: all .3s ease;
+    }
+
+    .slider-link svg {
+        bottom: 10px;
+        position: relative;
+    }
+
+    .swiper-slide-active .slider-link svg {
+        width: 104px;
+    }
+
+    .swiper-slide-active .slider-link:hover  {
+        transform: translate(15px, 0);
+    }
+
+    .swiper-slide.custom.swiper-slide-active {
+        /*!*transform: scale(1.1);*/
+        background: #121213;
+        border-top: 1px solid var(--color-blue);
+        border-bottom: 1px solid var(--color-blue);
+    }
+
+}
